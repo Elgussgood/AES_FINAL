@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service AES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Noto+Sans+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div id="Cuerpo">
+        <div id="Title">
+            Servicio de cifrado AES
+        </div>
+        <div id="Formulario">
+            <form id="Form">
+                <fieldset id="Dclave" class="Dclave">
+                    <legend class="Dtext">Ingresa tu clave</legend>
+                    <input id="Clave" type="text" name="Clave">
+                </fieldset>
+                <div id="Errortext">Caracteres que debe tener la clave: <div id="p16">16</div><div id="p24">24</div><div id="p32">32</div></div>
+                <div id="Dtipos" class="Margin">
+                    <p>¿Qué tipo de AES quieres utilizar?</p>
+                    <label for="Tipo1" class="Lradio">
+                        <input type="radio" value="128" name="Tipo" id="Tipo1" class="Radio" onchange="SelectionType();" checked> 
+                        <div class="Radio_radio"></div>    
+                        128
+                    </label>
+                    <label for="Tipo2" class="Lradio">
+                        <input type="radio" value="192" name="Tipo" id="Tipo2" class="Radio" onchange="SelectionType();">
+                        <div class="Radio_radio"></div>
+                        192
+                    </label>
+                    <label for="Tipo3" class="Lradio">
+                        <input type="radio" value="256" name="Tipo" id="Tipo3" class="Radio" onchange="SelectionType();">
+                        <div class="Radio_radio"></div>
+                        256
+                    </label>
+                </div>
+                <div id="Dformato" class="Margin">
+                    <p>¿En que formato quieres Introducir?</p>
+                    <label for="Formato1" class="Lradio">
+                        <input type="radio" id="Formato1" name="Formatos" value="Texto" class="Radio" onchange="SelectionFormat();" checked>
+                        <div class="Radio_radio"></div>
+                        Introducir en texto
+                    </label>
+                    <label for="Formato2" class="Lradio">
+                        <input type="radio" id="Formato2" name="Formatos" value="Archivo" class="Radio" onchange="SelectionFormat();">
+                        <div class="Radio_radio"></div>
+                        Introducir por archivo
+                    </label>
+                </div>
+                <div id="Darchivo" class="Margin">
+                    <div id="Iarchivo">
+                    <p>Introduce tu archivo a procesar :)</p>
+                    <input type="file" id="Archivo">
+                    </div>
+                    <button type ="submit" id="Fcifrar" class="boton cuatro" disabled><span>Cifrar</span></button>
+                    <button type ="submit" id="Fdescifrar" class="boton cuatro" disabled><span>Descifrar</span></button>
+                </div>
+                <div id="Dtexto" class="Margin">
+                    <label for="Texto" id="Ltexto">Coloca tu texto a procesar :)</label>
+                    <div id="Ctext">
+                        <textarea id="Texto" rows="4" cols="40" class="Text"></textarea>        
+                    </div>
+                    <div id="Errorcampo"></div>
+                    <button type ="submit" id="Tcifrar" class="boton cuatro" disabled><span>Cifrar</span></button>
+                    <button type="submit" id="Tdescifrar" class="boton cuatro" disabled><span>Descifrar</span></button>
+                </div>
+                </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <script src="js/aes.js"></script>
+        <script src="js/css.js"></script>
+    </div>
+</body>
+</html>
