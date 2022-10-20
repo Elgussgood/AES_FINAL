@@ -12,7 +12,7 @@ body{
     padding: 2rem;
     border-radius: 1rem;
     position: relative;
-    top: 10rem;
+    top: 3rem;
     margin-left: auto;
     margin-right: auto;
     background-color: #000;
@@ -29,6 +29,8 @@ body{
     border: none;
     outline: none;
     resize: none;
+    background-color: #040A09;
+    color: #1ABC9C;
 }
 #Ltexto{
     font-weight: 600;
@@ -78,7 +80,7 @@ body{
 }
 .Dclave{
     margin-left: 2rem;
-    width: 21em;
+    width: 25em;
     border: 1px solid #1ABC9C ;
     border-radius: 6px;
 }
@@ -187,12 +189,12 @@ body{
 #Errorcampo{
     display: none;
     margin-left: 2rem;
-    margin-top: .5rem;
+    margin-top: -4rem;
     color: red;
 }
 #p16{
     float: right;
-    display: none;
+    display: block;
 }
 #p24{
     float: right;
@@ -207,4 +209,23 @@ body{
 }
 #Darchivo{
 display: none;
+}
+#Resultadotxt{
+    
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 1rem;
+    bottom: 10.5rem;
+    position: absolute;
+    color: #1ABC9C;
+    background-color: #040A09;
+    margin-left: 30rem;
+    width: 17rem;
+    height: 24rem;
+    border-radius: 1rem;
+    display: none;
+}
+.text{
+    display: flex;
 }

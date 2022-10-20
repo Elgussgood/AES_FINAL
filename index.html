@@ -54,6 +54,7 @@
                         Introducir por archivo
                     </label>
                 </div>
+                <div id="Resultadotxt" class="text"></div>
                 <div id="Darchivo" class="Margin">
                     <div id="Iarchivo">
                     <p>Introduce tu archivo a procesar :)</p>
@@ -67,15 +68,16 @@
                     <div id="Ctext">
                         <textarea id="Texto" rows="4" cols="40" class="Text"></textarea>        
                     </div>
-                    <div id="Errorcampo"></div>
-                    <button type ="submit" id="Tcifrar" class="boton cuatro" disabled><span>Cifrar</span></button>
-                    <button type="submit" id="Tdescifrar" class="boton cuatro" disabled><span>Descifrar</span></button>
+                    <div id="Errorcampo">No puededes ingresar menor o mayor que.</div>
+                    <button type ="submit" id="Tcifrar" class="boton cuatro" onclick="cifrarTxt()" disabled><span>Cifrar</span></button>
+                    <button type="submit" id="Tdescifrar" class="boton cuatro" onclick="descifrarTxt()" disabled><span>Descifrar</span></button>
                 </div>
                 </form>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
         <script src="js/aes.js"></script>
         <script src="js/css.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </div>
 </body>
 </html>

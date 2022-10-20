@@ -1,12 +1,33 @@
+const form = document.getElementById('Form')
+var pass 
+var txt
+var cifradotxt
+var descifradotxt 
+form.addEventListener('submit',(e)=>{
+    e.preventDefault()
+})
+function cifrarTxt(){
+    console.log("se envio");
+    pass =document.getElementById("Clave").value
+    txt = document.getElementById('Texto').value
+    cifradotxt = CryptoJS.AES.encrypt(txt,pass);
+    document.getElementById('Resultadotxt').innerHTML=cifradotxt
+    document.getElementById('Resultadotxt').style.display='block'
+    
+}
+    
+    
 
-var mensaje ="voy a reprobar un monton de materias de manera inminente"
-
-var password ="qweqweqwe"
-
-var cifrado = CryptoJS.AES.encrypt(mensaje,password);
-var descifrado = CryptoJS.AES.decrypt(cifrado,password);
-
-document.getElementById("demo00").innerHTML = mensaje;
-document.getElementById("demo01").innerHTML = cifrado;
-document.getElementById("demo02").innerHTML = descifrado;
-document.getElementById("demo03").innerHTML = descifrado.toString(CryptoJS.enc.Utf8);
+function descifrarTxt(){
+    pass =document.getElementById("Clave").value
+    txt = document.getElementById('Texto').value
+    descifradotxt = CryptoJS.AES.decrypt(cifradotxt,pass);
+    document.getElementById('Resultadotxt').innerHTML=descifradotxt
+    document.getElementById('Resultadotxt').style.display='block'
+}
+function cifrarArc(){
+    
+}
+function cifrarArc(){
+    
+}
