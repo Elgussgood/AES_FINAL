@@ -1,6 +1,7 @@
 const formulario = document.getElementById("Form");
 const inputs = document.querySelectorAll('#Form input');
 const areatxt = document.getElementById("Texto");
+document.getElementById('Resultadotxt').style.display='none'
 //var areatxtv = document.getElementById("Texto").value;
 const clave1 = /^[^><]{16}$/
 const clave2 = /^[^><]{24}$/
@@ -36,6 +37,8 @@ var tipo = document.querySelector('input[name="Tipo"]:checked').value;
 }
 function SelectionFormat(){
     var formato = document.querySelector('input[name="Formatos"]:checked').value;
+    document.getElementById('Resultadotxt').style.display='none'
+    areatxt.value=""
     if(formato=='Texto'){
         document.getElementById('Dtexto').style.display='block';
         document.getElementById('Darchivo').style.display='none';
@@ -51,32 +54,24 @@ const validar = (e)=>{
     if(estandar.test(e.target.value)||e.target.value==undefined){
     document.getElementById("Errortext").style.display="none";
     document.getElementById('Tcifrar').disabled=false;
-    document.getElementById('Tdescifrar').disabled=false;
-    document.getElementById('Fcifrar').disabled=false;
     document.getElementById('Fdescifrar').disabled=false
+    document.getElementById('Btntxtci2').style.display="block"
     }else{
     document.getElementById("Errortext").style.display="block";
     document.getElementById('Tcifrar').disabled=true;
-    document.getElementById('Tdescifrar').disabled=true;
-    document.getElementById('Fcifrar').disabled=true;
     document.getElementById('Fdescifrar').disabled=true;
+    document.getElementById('Btntxtci2').style.display="none"
     }
         
 }
 const validart = (e)=>{
     if(text.test(areatxt.value)){
     document.getElementById("Errorcampo").style.display="none";
-    document.getElementById('Tcifrar').disabled=false;
-    document.getElementById('Tdescifrar').disabled=false;
-    document.getElementById('Fcifrar').disabled=false;
-    document.getElementById('Fdescifrar').disabled=false;
     }else{
     document.getElementById("Errorcampo").style.display="block";
     document.getElementById('Tcifrar').disabled=true;
-    document.getElementById('Tdescifrar').disabled=true;
-    document.getElementById('Fcifrar').disabled=true;
     document.getElementById('Fdescifrar').disabled=true
-    
+    document.getElementById('Btntxtci2').style.display="none"
     }
         
 }

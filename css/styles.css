@@ -187,6 +187,7 @@ body{
     color: red;
 }
 #Errorcampo{
+    position: absolute;
     display: none;
     margin-left: 2rem;
     margin-top: -4rem;
@@ -211,7 +212,7 @@ body{
 display: none;
 }
 #Resultadotxt{
-    
+    display: none;
     justify-content: center;
     align-items: center;
     font-size: 15px;
@@ -226,6 +227,22 @@ display: none;
     border-radius: 1rem;
     display: none;
 }
-.text{
-    display: flex;
+#Btntxtci2{
+    display: none;
+}
+a:active{
+    color: #fff;
+    text-decoration: none;
+}
+a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+a:link{
+    color: #fff;
+    text-decoration: none;
 }

@@ -42,35 +42,39 @@
                     </label>
                 </div>
                 <div id="Dformato" class="Margin">
-                    <p>¿En que formato quieres Introducir?</p>
+                    <p>¿Qué quieres hacer?</p>
                     <label for="Formato1" class="Lradio">
                         <input type="radio" id="Formato1" name="Formatos" value="Texto" class="Radio" onchange="SelectionFormat();" checked>
                         <div class="Radio_radio"></div>
-                        Introducir en texto
+                        Cifrar
                     </label>
                     <label for="Formato2" class="Lradio">
                         <input type="radio" id="Formato2" name="Formatos" value="Archivo" class="Radio" onchange="SelectionFormat();">
                         <div class="Radio_radio"></div>
-                        Introducir por archivo
+                        Descifrar
                     </label>
                 </div>
-                <div id="Resultadotxt" class="text"></div>
+                <div id="Resultadotxt" ></div>
                 <div id="Darchivo" class="Margin">
                     <div id="Iarchivo">
-                    <p>Introduce tu archivo a procesar :)</p>
+                    <p>Introduce tu archivo a descifrar :)</p>
                     <input type="file" id="Archivo">
                     </div>
-                    <button type ="submit" id="Fcifrar" class="boton cuatro" disabled><span>Cifrar</span></button>
                     <button type ="submit" id="Fdescifrar" class="boton cuatro" disabled><span>Descifrar</span></button>
                 </div>
                 <div id="Dtexto" class="Margin">
-                    <label for="Texto" id="Ltexto">Coloca tu texto a procesar :)</label>
+                    <label for="Texto" id="Ltexto">Coloca tu texto a cifrar :)</label>
                     <div id="Ctext">
                         <textarea id="Texto" rows="4" cols="40" class="Text"></textarea>        
                     </div>
                     <div id="Errorcampo">No puededes ingresar menor o mayor que.</div>
-                    <button type ="submit" id="Tcifrar" class="boton cuatro" onclick="cifrarTxt()" disabled><span>Cifrar</span></button>
-                    <button type="submit" id="Tdescifrar" class="boton cuatro" onclick="descifrarTxt()" disabled><span>Descifrar</span></button>
+                    <a id="Descargar" name="Descargar" download="Cifrado.txt">
+                        <button type ="submit" id="Tcifrar" class="boton cuatro" onclick="cifrarTxt()" disabled><span>
+                            <p id="Btntxtci2">Cifrar</p>
+                        </span></button>
+                    </a>
+                    
+                    
                 </div>
                 </form>
         </div>
