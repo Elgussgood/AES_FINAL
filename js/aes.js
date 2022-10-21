@@ -1,6 +1,4 @@
 const form = document.getElementById('Form')
-const descargar = document.getElementById('Descargar')
-
 document.getElementById('Tcifrar').addEventListener('click', (e)=>{
     e.preventDefault()
     cifrarTxt()
@@ -9,10 +7,25 @@ document.getElementById('Tcifrar').addEventListener('click', (e)=>{
 
 var pass =""
 var txt =""
-var cifradotxt
-var descifradotxt 
+var descifradotxt
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
+})
+document.querySelector('input[type="file"]').addEventListener('change', function(e) {
+    const res = document.getElementById('Resultadotxt');
+    pass =document.getElementById("Clave").value
+    const reader = new FileReader();
+    var archivo = this.files[0];
+    reader.addEventListener("load", () => {
+        descifradotxt = CryptoJS.AES.decrypt(reader.result,pass).toString(CryptoJS.enc.Utf8)
+        res.innerText = descifradotxt
+        console.log(descifradotxt)
+    }, false);
+    if (archivo) {
+        reader.readAsText(archivo);
+    }
+
+    
 })
 const cifrarTxt = ()=>{
     pass =document.getElementById("Clave").value

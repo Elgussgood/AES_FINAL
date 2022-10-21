@@ -17,7 +17,7 @@
             Servicio de cifrado AES
         </div>
         <div id="Formulario">
-            <form id="Form">
+            <form id="Form" method="post" enctype="multipart/form-data">
                 <fieldset id="Dclave" class="Dclave">
                     <legend class="Dtext">Ingresa tu clave</legend>
                     <input id="Clave" type="text" name="Clave">
@@ -58,9 +58,8 @@
                 <div id="Darchivo" class="Margin">
                     <div id="Iarchivo">
                     <p>Introduce tu archivo a descifrar :)</p>
-                    <input type="file" id="Archivo">
+                    <input type="file" id="Archivo" accept=".txt">
                     </div>
-                    <button type ="submit" id="Fdescifrar" class="boton cuatro" disabled><span>Descifrar</span></button>
                 </div>
                 <div id="Dtexto" class="Margin">
                     <label for="Texto" id="Ltexto">Coloca tu texto a cifrar :)</label>

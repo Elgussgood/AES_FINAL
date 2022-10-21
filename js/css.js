@@ -1,7 +1,7 @@
 const formulario = document.getElementById("Form");
 const inputs = document.querySelectorAll('#Form input');
 const areatxt = document.getElementById("Texto");
-document.getElementById('Resultadotxt').style.display='none'
+document.getElementById('Resultadotxt').style.display='block'
 //var areatxtv = document.getElementById("Texto").value;
 const clave1 = /^[^><]{16}$/
 const clave2 = /^[^><]{24}$/
@@ -37,7 +37,7 @@ var tipo = document.querySelector('input[name="Tipo"]:checked').value;
 }
 function SelectionFormat(){
     var formato = document.querySelector('input[name="Formatos"]:checked').value;
-    document.getElementById('Resultadotxt').style.display='none'
+
     areatxt.value=""
     if(formato=='Texto'){
         document.getElementById('Dtexto').style.display='block';
@@ -54,13 +54,12 @@ const validar = (e)=>{
     if(estandar.test(e.target.value)||e.target.value==undefined){
     document.getElementById("Errortext").style.display="none";
     document.getElementById('Tcifrar').disabled=false;
-    document.getElementById('Fdescifrar').disabled=false
-    document.getElementById('Btntxtci2').style.display="block"
+    document.getElementById('Iarchivo').style.display='block';
     }else{
     document.getElementById("Errortext").style.display="block";
     document.getElementById('Tcifrar').disabled=true;
-    document.getElementById('Fdescifrar').disabled=true;
-    document.getElementById('Btntxtci2').style.display="none"
+    document.getElementById('Iarchivo').style.display='none';
+
     }
         
 }
@@ -70,8 +69,7 @@ const validart = (e)=>{
     }else{
     document.getElementById("Errorcampo").style.display="block";
     document.getElementById('Tcifrar').disabled=true;
-    document.getElementById('Fdescifrar').disabled=true
-    document.getElementById('Btntxtci2').style.display="none"
+    document.getElementById('Iarchivo').style.display='none';
     }
         
 }
