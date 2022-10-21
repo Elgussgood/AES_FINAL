@@ -227,22 +227,4 @@ display: none;
     border-radius: 1rem;
     display: none;
 }
-#Btntxtci2{
-    display: none;
-}
-a:active{
-    color: #fff;
-    text-decoration: none;
-}
-a:visited{
-    color: #fff;
-    text-decoration: none;
-}
-a:hover{
-    color: #fff;
-    text-decoration: none;
-}
-a:link{
-    color: #fff;
-    text-decoration: none;
-}
+    
